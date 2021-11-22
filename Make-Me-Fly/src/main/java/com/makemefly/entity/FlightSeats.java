@@ -17,6 +17,11 @@ public class FlightSeats {
         this.flightSeatId = flightSeatId;
     }
 
+    public FlightSeats(int flightSeatId, String flightSeatNumber) {
+        this.flightSeatId = flightSeatId;
+        this.flightSeatNumber = flightSeatNumber;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int flightSeatId;

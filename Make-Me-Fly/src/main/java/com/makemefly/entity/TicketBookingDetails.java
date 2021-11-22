@@ -23,6 +23,7 @@ public class TicketBookingDetails {
     private String pnrNo;
     private LocalDate travelDate;
     private Double ticketCost;
+    private int isActive ;
 
     @OneToOne
     @JoinColumn(name ="flight_schedule_id_fk")

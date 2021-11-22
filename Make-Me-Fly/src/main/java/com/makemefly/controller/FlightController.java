@@ -3,8 +3,10 @@ package com.makemefly.controller;
 import com.makemefly.Exception.FlightNotFoundException;
 import com.makemefly.dto.FlightDTO;
 import com.makemefly.dto.FlightScheduleDTO;
+import com.makemefly.dto.FlightScheduleId;
 import com.makemefly.entity.Flight;
 import com.makemefly.entity.FlightSchedule;
+import com.makemefly.entity.FlightSeats;
 import com.makemefly.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -39,9 +41,19 @@ public class FlightController {
         return flightService.getFlightSchedules();
     }
 
-    @PostMapping(value = "/deleteFlight/{flightId}")
+    @PutMapping(value = "/blockFlight/{flightId}")
     public String blockFlight(@PathVariable int flightId) throws FlightNotFoundException {
         return flightService.blockFlight(flightId);
+    }
+
+    @GetMapping(value = "/getFlightSeats/{flightScheduleId}")
+    public List<FlightSeats> getListOfFlight(@PathVariable int flightScheduleId){
+        return flightService.getListOfFlightSeats(flightScheduleId);
+    }
+
+    @GetMapping("/getAllFlight/{flightId}")
+    public Flight getAllFlightById(@PathVariable int flightId){
+        return flightService.getFlightById(flightId);
     }
 
 }

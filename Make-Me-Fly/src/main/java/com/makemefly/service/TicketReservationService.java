@@ -1,5 +1,6 @@
 package com.makemefly.service;
 
+import com.makemefly.Exception.AirlineNotFoundException;
 import com.makemefly.Exception.TicketNotFoundException;
 import com.makemefly.dto.AvailableFlightsDTO;
 import com.makemefly.dto.FlightSearchDTO;
@@ -46,6 +47,7 @@ public class TicketReservationService {
         TicketBookingDetails ticketBookingDetails = flightBookingMapper.mapToTicketBookingDetails(ticketBookingDTO);
         ticketBookingDetails.setTravelDate(ticketBookingDTO.getTravelDate());
         ticketBookingDetails.setPnrNo(generatePNR());
+        ticketBookingDetails.setIsActive(1);
         ticketBookingDetails.setBookingFlight(ticketBookingDTO.getFlightSchedule());
         double businessTicketCostPerTicket = (Double)flightScheduleRepository.getBusinessSeatCostByFlightScheduleId(ticketBookingDetails.getBookingFlight().getFlightScheduleId());
         double nonBusinessTicketCostPerTicket = (Double)flightScheduleRepository.getNonBusinessSeatCostByFlightScheduleId(ticketBookingDetails.getBookingFlight().getFlightScheduleId());
@@ -87,6 +89,15 @@ public class TicketReservationService {
                 if(ticketBookingDetails != null)
         return ticketBookingDetails;
                 else throw new TicketNotFoundException(" Ticket Not Found for this ticket Id "+ ticketBookingId);
+    }
+
+    public String cancelTicketsByTicketId(int ticketBookingId) throws TicketNotFoundException {
+        int canceledTicket = ticketReservationRepository.cancelTicket(ticketBookingId);
+        if(canceledTicket != 0){
+            return "Ticked Cancelled Successfully";
+        }else{
+            throw new TicketNotFoundException("Airline Not Exist");
+        }
     }
 
     public List<AvailableFlightsDTO> getAvailableFlights(FlightSearchDTO flightSearchDTO){

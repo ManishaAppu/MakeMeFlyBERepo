@@ -13,12 +13,16 @@ import java.util.List;
 @Repository
 public interface AirlineRepository extends JpaRepository<Airline, Integer> {
 
-    @Query(value = "from Airline a where a.isActive = 1")
-    public List<Airline> getAllAirlines();
+//    @Query(value = "from Airline a where a.isActive = 1")
+//    public List<Airline> findAll();
 
     @Transactional
     @Modifying
     @Query(value = "update Airline set isActive = 0 where airlineId = :airlineId")
     public int blockAirline(@Param("airlineId") int airlineId);
 
+    @Transactional
+    @Modifying
+    @Query(value = "update Airline set isActive = 1 where airlineId = :airlineId")
+    public int unBlockAirline(@Param("airlineId") int airlineId);
 }

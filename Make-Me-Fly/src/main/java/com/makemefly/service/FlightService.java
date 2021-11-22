@@ -4,6 +4,7 @@ import com.makemefly.Constants.CommonConstants;
 import com.makemefly.Exception.FlightNotFoundException;
 import com.makemefly.dto.FlightDTO;
 import com.makemefly.dto.FlightScheduleDTO;
+import com.makemefly.dto.FlightScheduleId;
 import com.makemefly.entity.*;
 import com.makemefly.mapper.FlightMapper;
 import com.makemefly.repository.FlightRepository;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FlightService {
@@ -97,7 +99,6 @@ public class FlightService {
 
     }
 
-
     public List<FlightSchedule> getFlightSchedules(){
         return flightScheduleRepository.findAll();
     }
@@ -108,5 +109,15 @@ public class FlightService {
             return "Flight Blocked Successfully";
         }
         throw new FlightNotFoundException("Flight Not Exist");
+    }
+
+    public List<FlightSeats> getListOfFlightSeats(int flightScheduleId){
+        return flightRepository.getFlightSeatsByFlightSchedules(flightScheduleId);
+
+    }
+
+    public Flight getFlightById(int flightId){
+        Optional flight = flightRepository.findById(flightId);
+        return (Flight)flight.get();
     }
 }

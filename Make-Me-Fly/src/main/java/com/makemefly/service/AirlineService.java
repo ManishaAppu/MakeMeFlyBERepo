@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AirlineService {
@@ -26,7 +27,7 @@ public class AirlineService {
     }
 
     public List<Airline> getAirlines(){
-        return airlineRepository.getAllAirlines();
+        return airlineRepository.findAll();
     }
 
     public String  blockAirline(int airlineId) throws AirlineNotFoundException {
@@ -36,6 +37,20 @@ public class AirlineService {
         }else{
             throw new AirlineNotFoundException("Airline Not Exist");
         }
+    }
+
+    public String unBlockAirline(int airlineId) throws AirlineNotFoundException {
+        int blockedAirline = airlineRepository.unBlockAirline(airlineId);
+        if(blockedAirline != 0){
+            return "UnBlocked the Airline Successfully";
+        }else{
+            throw new AirlineNotFoundException("Airline Not Exist");
+        }
+    }
+
+    public Airline getAirlineById(int airlineId){
+        Optional airline = airlineRepository.findById(airlineId);
+        return (Airline) airline.get();
     }
 
 
