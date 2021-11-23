@@ -9,6 +9,8 @@ import com.makemefly.entity.FlightSchedule;
 import com.makemefly.entity.FlightSeats;
 import com.makemefly.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,8 +44,9 @@ public class FlightController {
     }
 
     @PutMapping(value = "/blockFlight/{flightId}")
-    public String blockFlight(@PathVariable int flightId) throws FlightNotFoundException {
-        return flightService.blockFlight(flightId);
+    public ResponseEntity<String> blockFlight(@PathVariable int flightId) throws FlightNotFoundException {
+        flightService.blockFlight(flightId);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping(value = "/getFlightSeats/{flightScheduleId}")
@@ -51,9 +54,15 @@ public class FlightController {
         return flightService.getListOfFlightSeats(flightScheduleId);
     }
 
-    @GetMapping("/getAllFlight/{flightId}")
-    public Flight getAllFlightById(@PathVariable int flightId){
+    @GetMapping("/getFlight/{flightId}")
+    public Flight getFlightById(@PathVariable int flightId){
         return flightService.getFlightById(flightId);
+    }
+
+    @PutMapping(value = "/unBlockFlight/{flightId}")
+    public ResponseEntity<String> unBlockFlight(@PathVariable int flightId) throws FlightNotFoundException {
+        flightService.unBlockFlight(flightId);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

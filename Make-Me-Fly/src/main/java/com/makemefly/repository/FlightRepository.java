@@ -21,10 +21,16 @@ public interface FlightRepository extends JpaRepository<Flight, Integer> {
     @Transactional
     @Modifying
     @Query(value = "update Flight set isActive = 0 where flightId = :flightId")
-    public int deleteFlight(@Param("flightId") int flightId);
+    public int blockFlight(@Param("flightId") int flightId);
 
     @Query("select new com.makemefly.entity.FlightSeats(FS.flightSeatId, FS.flightSeatNumber) from FlightSeats FS inner join FlightSchedule FSC on FSC.flight = FS.flight where FSC.flightScheduleId = :flightScheduleId ")
     public List<FlightSeats> getFlightSeatsByFlightSchedules(@Param("flightScheduleId")int flightScheduleId);
+
+    @Transactional
+    @Modifying
+    @Query(value = "update Flight set isActive = 1 where flightId = :flightId")
+    public int unBlockFlight(@Param("flightId") int flightId);
+
 
 
 }

@@ -38,7 +38,7 @@ public class TicketReservationController {
         return ticketReservationService.getAvailableFlights(flightSearchDTO);
     }
 
-    @PostMapping("/cancelTicket/{ticketId}")
+    @PutMapping("/cancelTicket/{ticketId}")
     public String cancelTicketByTicketBookingId(@PathVariable int ticketId) throws TicketNotFoundException {
         return ticketReservationService.cancelTicketsByTicketId(ticketId);
     }

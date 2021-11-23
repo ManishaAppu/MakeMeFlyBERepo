@@ -70,7 +70,7 @@ public class FlightService {
     }
 
     public List<Flight> getAllFlight(){
-        return flightRepository.getAllFlights();
+        return flightRepository.findAll();
     }
 
     public FlightSchedule scheduleFlight(FlightScheduleDTO flightScheduleDTO){
@@ -104,7 +104,7 @@ public class FlightService {
     }
 
     public String blockFlight(int flightId) throws FlightNotFoundException {
-        int blockedFlights = flightRepository.deleteFlight(flightId);
+        int blockedFlights = flightRepository.blockFlight(flightId);
         if(blockedFlights != 0){
             return "Flight Blocked Successfully";
         }
@@ -119,5 +119,13 @@ public class FlightService {
     public Flight getFlightById(int flightId){
         Optional flight = flightRepository.findById(flightId);
         return (Flight)flight.get();
+    }
+
+    public String unBlockFlight(int flightId) throws FlightNotFoundException {
+        int blockedFlights = flightRepository.unBlockFlight(flightId);
+        if(blockedFlights != 0){
+            return "Flight Blocked Successfully";
+        }
+        throw new FlightNotFoundException("Flight Not Exist");
     }
 }
