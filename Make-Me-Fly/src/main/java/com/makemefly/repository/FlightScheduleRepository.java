@@ -4,9 +4,11 @@ import com.makemefly.dto.AvailableFlightsDTO;
 import com.makemefly.entity.Flight;
 import com.makemefly.entity.FlightSchedule;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -31,8 +33,16 @@ public interface FlightScheduleRepository extends JpaRepository<FlightSchedule, 
                                                                 @Param("travelDate") LocalDateTime travelDate);
 
 
+    @Transactional
+    @Modifying
+    @Query(value = "update FlightSchedule set isActive = 0 where flightScheduleId = :flightScheduleId")
+    public int blockFlightSchedule(@Param("flightScheduleId") int flightScheduleId);
 
 
+    @Transactional
+    @Modifying
+    @Query(value = "update FlightSchedule set isActive = 1 where flightScheduleId = :flightScheduleId")
+    public int unBlockFlightSchedule(@Param("flightScheduleId") int flightScheduleId);
 
 
 

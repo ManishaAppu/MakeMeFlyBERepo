@@ -24,14 +24,14 @@ public class TicketBookingDetails {
     private LocalDate travelDate;
     private Double ticketCost;
     private int isActive ;
+    private String userEmail;
 
     @OneToOne
     @JoinColumn(name ="flight_schedule_id_fk")
     private FlightSchedule bookingFlight;
 
-    @OneToOne
-    @JoinColumn(name = "user_id_fk")
-    private Users user;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    private Users user;
 
     @OneToMany(mappedBy = "ticketId")
     private List<Passenger> passengerList;

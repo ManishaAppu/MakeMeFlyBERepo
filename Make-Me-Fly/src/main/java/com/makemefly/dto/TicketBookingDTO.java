@@ -21,6 +21,6 @@ public class TicketBookingDTO {
     private int noOfNonBusinessSeatsBooking;
     private LocalDate travelDate;
     private FlightSchedule flightSchedule;
-    private Users user;
+    private String userEmail;
     private List<PassengerDTO> passengerList;
 }

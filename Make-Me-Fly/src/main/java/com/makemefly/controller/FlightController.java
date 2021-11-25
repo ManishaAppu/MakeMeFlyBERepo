@@ -65,4 +65,16 @@ public class FlightController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @PutMapping(value="/blockFlightSchedule/{flightScheduleId}")
+    public ResponseEntity<String> blockFlightSchedule(@PathVariable int flightScheduleId){
+        flightService.blockFlightSchedule(flightScheduleId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PutMapping(value="/unBlockFlightSchedule/{flightScheduleId}")
+    public ResponseEntity<String> unBlockFlightSchedule(@PathVariable int flightScheduleId){
+        flightService.unBlockFlightSchedule(flightScheduleId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }

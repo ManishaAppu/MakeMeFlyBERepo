@@ -24,6 +24,7 @@ public class FlightSchedule {
     private LocalDateTime arrivalTime;
     private LocalDateTime scheduledStartDate;
     private LocalDateTime scheduledEndDate;
+    private int isActive;
 
     @OneToOne
     @JoinColumn(name="flightId")

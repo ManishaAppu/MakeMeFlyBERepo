@@ -15,4 +15,6 @@ public interface PassengerRepository extends JpaRepository<Passenger, Integer> {
     @Query(value = "SELECT new com.makemefly.dto.PassengerMealDTO(P.passengerId, P.passengerName, M.mealType) " +
             "FROM Passenger P JOIN  Meal M ON M.mealId = P.meal.mealId WHERE P.passengerId = :passengerId")
     public List<PassengerMealDTO> passengerMeals(@Param("passengerId") int passengerId);
+
+
 }

@@ -82,6 +82,7 @@ public class FlightService {
         flightSchedule.setDestinationPlaceId(new City(flightScheduleDTO.getDestinationPlaceId()));
         flightSchedule.setScheduledStartDate(flightScheduleDTO.getScheduledStartDate());
         flightSchedule.setScheduledEndDate(flightScheduleDTO.getScheduledEndDate());
+        flightSchedule.setIsActive(1);
         return flightScheduleRepository.save(flightSchedule);
     }
 
@@ -127,5 +128,21 @@ public class FlightService {
             return "Flight Blocked Successfully";
         }
         throw new FlightNotFoundException("Flight Not Exist");
+    }
+
+    public String blockFlightSchedule(int flightScheduleId){
+        int flightScheduleBlock = flightScheduleRepository.blockFlightSchedule(flightScheduleId);
+        if(flightScheduleBlock != 0){
+            return "Schedule Blocked Successfully";
+        }
+        return "Schedule Block Failed";
+    }
+
+    public String unBlockFlightSchedule(int flightScheduleId){
+        int flightScheduleBlock = flightScheduleRepository.unBlockFlightSchedule(flightScheduleId);
+        if(flightScheduleBlock != 0){
+            return "Schedule UnBlocked Successfully";
+        }
+        return "Schedule UnBlock Failed";
     }
 }

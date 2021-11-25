@@ -103,4 +103,15 @@ public class TicketReservationService {
     public List<AvailableFlightsDTO> getAvailableFlights(FlightSearchDTO flightSearchDTO){
       return flightScheduleRepository.getListOfAvailableFlights(flightSearchDTO.getDeparturePlaceId(), flightSearchDTO.getDestinationPlaceId(), flightSearchDTO.getTravelDate());
     }
+
+    public List<TicketBookingDetails>  getTicketByUser(String userEmail){
+        return ticketReservationRepository.findTicketByUserEmail(userEmail);
+    }
+
+
+    public List<TicketBookingDetails> getTicketsByUserEmail(String userEmail){
+      return ticketReservationRepository.findByUserEmail(userEmail);
+    }
+
+
 }
