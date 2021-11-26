@@ -9,6 +9,8 @@ import com.makemefly.entity.Passenger;
 import com.makemefly.entity.TicketBookingDetails;
 import com.makemefly.service.TicketReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Path;
@@ -16,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1")
+@CrossOrigin
 public class TicketReservationController {
 
     @Autowired
@@ -42,8 +45,9 @@ public class TicketReservationController {
     }
 
     @PutMapping("/cancelTicket/{ticketId}")
-    public String cancelTicketByTicketBookingId(@PathVariable int ticketId) throws TicketNotFoundException {
-        return ticketReservationService.cancelTicketsByTicketId(ticketId);
+    public ResponseEntity<String> cancelTicketByTicketBookingId(@PathVariable int ticketId) throws TicketNotFoundException {
+         ticketReservationService.cancelTicketsByTicketId(ticketId);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/getTicketByUser/{userEmail}")

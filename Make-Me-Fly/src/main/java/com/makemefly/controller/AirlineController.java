@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1")
+@CrossOrigin
 public class AirlineController {
 
     private KafkaTemplate kafkaTemplate;

@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1")
-//@CrossOrigin({"http://localhost:4200"})
+@CrossOrigin
 public class FlightController {
 
     @Autowired
@@ -38,11 +38,13 @@ public class FlightController {
         return flightService.scheduleFlight(flightScheduleDTO);
     }
 
+//    @CrossOrigin(origins="http://localhost:4200/")
     @GetMapping("/getSchedules")
     public List<FlightSchedule> getFlightSchedules(){
         return flightService.getFlightSchedules();
     }
 
+//    @CrossOrigin(origins="http://localhost:4200/")
     @PutMapping(value = "/blockFlight/{flightId}")
     public ResponseEntity<String> blockFlight(@PathVariable int flightId) throws FlightNotFoundException {
         flightService.blockFlight(flightId);

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+//@CrossOrigin(origins="http://localhost:4200/makemefly/")
 @CrossOrigin
 public class JwtAuthenticationController {
 
@@ -32,6 +33,8 @@ public class JwtAuthenticationController {
     @PostMapping (value = "/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
 
+        System.out.println("Inside of Authentication Controller ");
+
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
 
         final UserDetails userDetails = userDetailsService
@@ -44,6 +47,7 @@ public class JwtAuthenticationController {
 
     private void authenticate(String username, String password) throws Exception {
         try {
+            System.out.println(" UserName >>> " + username + "  Password  >>>> " + password);
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (DisabledException e) {
             throw new Exception("USER_DISABLED", e);

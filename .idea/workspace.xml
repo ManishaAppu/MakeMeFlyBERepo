@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34989b86-46e6-46c4-a5fd-04e6123a4084" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/SearchTicketRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/CrosConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/MakeMeFlyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/MakeMeFlyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/AirlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/AirlineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/CityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/JwtAuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/MealsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/MealsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/TicketReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/TicketReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/TicketBookingDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/TicketBookingDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/FlightSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/FlightSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/TicketBookingDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/TicketBookingDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/FlightScheduleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/FlightScheduleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/PassengerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/TicketReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/TicketReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/TicketReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/TicketReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/com/demo/ZuulApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul/src/main/java/com/demo/ZuulApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/eureka/target/" />
     <ignored path="$PROJECT_DIR$/Make-Me-Fly/target/" />
@@ -30,17 +30,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/TicketReservationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+            <state relative-caret-position="102">
+              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/SearchTicketRequest.java">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="119">
+              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/CrosConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,64 +58,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/TicketReservationService.java">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="87" column="86" selection-start-line="87" selection-start-column="86" selection-end-line="87" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/PassengerRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/mapper/FlightBookingMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/TicketBookingDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="-459">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/TicketReservationRepository.java">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/MakeMeFlyApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="119">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/Users.java">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/AirlineController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="20" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/TicketBookingDetails.java">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/CityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            <state relative-caret-position="102">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/JwtAuthenticationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -114,8 +105,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/FlightController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/MealsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -133,6 +133,7 @@
     <findStrings>
       <find>204</find>
       <find>user</find>
+      <find>makemefly</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,33 +149,44 @@
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/ResponseDTO.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/AirlineRepository.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/AirlineService.java" />
-        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/AirlineController.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/FlightRepository.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/FlightSchedule.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/FlightService.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/FlightScheduleRepository.java" />
-        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/FlightController.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/TicketBookingDTO.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/entity/TicketBookingDetails.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/target/generated-sources/annotations/com/makemefly/mapper/FlightBookingMapperImpl.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/dto/SearchTicketRequest.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/service/TicketReservationService.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/PassengerRepository.java" />
-        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/TicketReservationController.java" />
         <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/TicketReservationRepository.java" />
+        <option value="$PROJECT_DIR$/zuul/src/main/java/com/demo/ZuulApplication.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/DevConfig.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/CrosConfig.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/AirlineController.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/CityController.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/FlightController.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/MealsController.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/TicketReservationController.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/JwtAuthenticationController.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/MakeMeFlyApplication.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
-    <option name="width" value="1932" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-15" />
+    <option name="y" value="9" />
+    <option name="width" value="2898" />
+    <option name="height" value="1536" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -352,12 +364,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1637763659498" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1637909223855" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/zuul" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\Make Me Fly App - Copy\Make-Me-Fly\src\main\java\com\makemefly\config" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -433,9 +449,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1288" height="687" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30162603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25788197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -444,15 +461,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36200717" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31448764" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32616487" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32508835" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32685512" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32508835" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -463,7 +480,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37743506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25788197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -472,15 +489,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38958707" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26678446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32685512" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32508835" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32685512" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32508835" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -496,13 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/MakeMeFlyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -527,20 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/JwtAuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/JwtAuthenticationEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -600,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/AirlineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/FlightRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -643,13 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/TicketReservationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -705,17 +687,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/FlightController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/repository/TicketReservationRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="22" column="52" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/com/demo/ZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/JwtAuthenticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/DevConfig.java" />
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/AirlineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/CityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/FlightController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/JwtAuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="53" column="45" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/MealsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/TicketReservationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/config/CrosConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Make-Me-Fly/src/main/java/com/makemefly/MakeMeFlyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
