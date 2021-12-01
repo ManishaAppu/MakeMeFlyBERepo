@@ -31,6 +31,10 @@ public interface FlightRepository extends JpaRepository<Flight, Integer> {
     @Query(value = "update Flight set isActive = 1 where flightId = :flightId")
     public int unBlockFlight(@Param("flightId") int flightId);
 
+    @Query(value = "select distinct user_email from ticket_booking_details tbs inner join \n" +
+            "flight_schedule fs on fs.flight_schedule_id = tbs.flight_schedule_id_fk \n" +
+            "inner join flight f on f.flight_id = fs.flight_id where f.flight_id = :flightId", nativeQuery = true)
+    public List<String> getNotifiedUser(@Param("flightId") int flightId);
 
 
 }

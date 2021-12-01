@@ -15,6 +15,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.mail.internet.AddressException;
+
 @SpringBootTest
 public class FlightServiceTest {
 
@@ -22,7 +24,7 @@ public class FlightServiceTest {
     FlightService flightService;
 
     @Test
-    public void testBlockFlight() throws FlightNotFoundException {
+    public void testBlockFlight() throws FlightNotFoundException, AddressException {
         Mockito.doThrow(new FlightNotFoundException("Flight Not Exist")).when(flightService).blockFlight(ArgumentMatchers.anyInt());
         Assertions.assertThrows(FlightNotFoundException.class, () -> {
             flightService.blockFlight(ArgumentMatchers.anyInt());
@@ -30,7 +32,7 @@ public class FlightServiceTest {
     }
 
     @Test
-    public void testSuccessfulBlockFlight() throws FlightNotFoundException {
+    public void testSuccessfulBlockFlight() throws FlightNotFoundException, AddressException {
         Mockito.when(flightService.blockFlight(ArgumentMatchers.anyInt())).thenReturn("Flight Blocked Successfully");
         Assertions.assertEquals("Flight Blocked Successfully", flightService.blockFlight(ArgumentMatchers.anyInt()));
     }

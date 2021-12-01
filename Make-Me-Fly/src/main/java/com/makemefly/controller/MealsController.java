@@ -2,7 +2,6 @@ package com.makemefly.controller;
 
 import com.makemefly.entity.Meal;
 import com.makemefly.service.MealsServices;
-import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

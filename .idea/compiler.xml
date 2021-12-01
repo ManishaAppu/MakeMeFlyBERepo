@@ -26,7 +26,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eureka" target="11" />
-      <module name="Make-Me-Fly" target="1.8" />
+      <module name="Make-Me-Fly" target="11" />
       <module name="Make-Me-Fly-Auth" target="1.8" />
       <module name="zuul-api-gateway" target="1.8" />
     </bytecodeTargetLevel>

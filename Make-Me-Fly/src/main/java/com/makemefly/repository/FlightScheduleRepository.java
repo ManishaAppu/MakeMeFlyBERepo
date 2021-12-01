@@ -45,6 +45,4 @@ public interface FlightScheduleRepository extends JpaRepository<FlightSchedule, 
     public int unBlockFlightSchedule(@Param("flightScheduleId") int flightScheduleId);
 
 
-
-
 }

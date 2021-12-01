@@ -13,7 +13,9 @@ import com.makemefly.repository.FlightSeatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.mail.internet.AddressException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +34,8 @@ public class FlightService {
     @Autowired
     FlightMapper flightMapper;
 
+    @Autowired
+    EmailSenderService emailSenderService;
 
     public Flight addFlight(FlightDTO flightDTO){
         Airline  airline = new Airline();
@@ -104,9 +108,14 @@ public class FlightService {
         return flightScheduleRepository.findAll();
     }
 
-    public String blockFlight(int flightId) throws FlightNotFoundException {
+    public String blockFlight(int flightId) throws FlightNotFoundException, AddressException {
         int blockedFlights = flightRepository.blockFlight(flightId);
         if(blockedFlights != 0){
+            List<String> notifiedUsers = flightRepository.getNotifiedUser(flightId);
+            for(String user: notifiedUsers){
+                String bodyOfTheContent = "Dear "+ user + ", \n \n Your Flight is blocked due to some emergency flight services, Please book another flight. \n We regret for the inconvenience caused !!! ";
+                emailSenderService.sendEMail(user, bodyOfTheContent, "Imp !-  Fight cancelled Due to Emergency flight service" );
+            }
             return "Flight Blocked Successfully";
         }
         throw new FlightNotFoundException("Flight Not Exist");

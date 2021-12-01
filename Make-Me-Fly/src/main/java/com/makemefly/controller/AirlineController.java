@@ -5,14 +5,16 @@ import com.makemefly.dto.AirlineDTO;
 import com.makemefly.dto.MessageDTO;
 import com.makemefly.entity.Airline;
 import com.makemefly.service.AirlineService;
+import com.makemefly.service.EmailSenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.kafka.core.KafkaTemplate;
+//import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.internet.AddressException;
 import javax.websocket.server.PathParam;
-import javax.ws.rs.Path;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -20,17 +22,20 @@ import java.util.List;
 @CrossOrigin
 public class AirlineController {
 
-    private KafkaTemplate kafkaTemplate;
+//    private KafkaTemplate kafkaTemplate;
 
-    public AirlineController(KafkaTemplate kafkaTemplate){
-        this.kafkaTemplate = kafkaTemplate;
-    }
+//    public AirlineController(KafkaTemplate kafkaTemplate){
+//        this.kafkaTemplate = kafkaTemplate;
+//    }
 
     private static final String TOPIC = "kafka_topic";
 
 
     @Autowired
     AirlineService airlineService;
+
+    @Autowired
+    EmailSenderService emailSenderService;
 
     @GetMapping()
     public String welcomeMessage(){
@@ -66,6 +71,12 @@ public class AirlineController {
     @GetMapping(value="/getAirline/{airlineId}")
     public Airline getAirlineById(@PathVariable int airlineId){
         return airlineService.getAirlineById(airlineId);
+    }
+
+    @PostMapping(value="sendMail")
+    public String sendMail() throws AddressException {
+        emailSenderService.sendEMail("damaris.runolfsdottir2@ethereal.email", "Test", "Mail sub");
+        return "Success";
     }
 
 }

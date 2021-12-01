@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.internet.AddressException;
 import java.util.List;
 
 @RestController
@@ -46,7 +47,7 @@ public class FlightController {
 
 //    @CrossOrigin(origins="http://localhost:4200/")
     @PutMapping(value = "/blockFlight/{flightId}")
-    public ResponseEntity<String> blockFlight(@PathVariable int flightId) throws FlightNotFoundException {
+    public ResponseEntity<String> blockFlight(@PathVariable int flightId) throws FlightNotFoundException, AddressException {
         flightService.blockFlight(flightId);
         return new ResponseEntity<>(HttpStatus.OK);
     }

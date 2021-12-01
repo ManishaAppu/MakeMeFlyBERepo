@@ -3,7 +3,6 @@ package com.makemefly;
 import com.makemefly.Exception.TicketNotFoundException;
 import com.makemefly.repository.TicketReservationRepository;
 import com.makemefly.service.TicketReservationService;
-import com.netflix.discovery.converters.Auto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;
