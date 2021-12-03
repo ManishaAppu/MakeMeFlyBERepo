@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "05107e47-bcb9-4b0d-a622-97105f969bdc",
+		"name": "Make Me Fly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Welcome Message",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Airline",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM3MzUwOTEyLCJpYXQiOjE2MzczMzI5MTJ9.uwBQ1T_6Ux8WRpPSJgAyDDmtBoouJo7ju-TZJnXu59bGbrIrbd3t9Pw9nXj1oxnHJHhj0IM7-PaWdJEzlhV9Xg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getAirlines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getAirlines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Flight",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTA4Nzc4LCJpYXQiOjE2MzY4OTA3Nzh9.som3TXZ7F1VbueX4u3SoxcU5PBzjwRjVVsQcgQ5W9qTUHJmU-VeIvBbv2zkC32d6cKlHtD_JCf8rq9TAyWAZ6w",
+						"type": "text"
+					},
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getAllFlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getAllFlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Airline",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineName\" : \"Decaan\",\r\n    \"iaia\" : \"DC\",\r\n    \"isActive\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/addAirline",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"addAirline"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Flight",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flightName\": \"Deccan CS1\",\r\n     \"airlineId\":1,\r\n    \"businessSeats\":20,\r\n    \"nonBusinessSeats\":15,\r\n    \"businessSeatCost\":9000.0,\r\n    \"nonBusinessSeatCost\": 3000.0,\r\n    \"isActive\":1,\r\n    \"meals\": [{\r\n        \"mealId\": 1, \r\n        \"mealType\":\"Veg\"\r\n    },\r\n    {\r\n        \"mealId\": 2, \r\n        \"mealType\":\"Non-Veg\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/addFlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"addFlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All City",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM3NTA4Mzg1LCJpYXQiOjE2Mzc0OTAzODV9.v41NaMr1s4gGfxHd7d6PiwDtHqyMOPEJ9z2BzY1RY_dGyV9codOMM-y6PAwcnwztebd3cB1O6VTDK2p4t2-WcA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getAllCity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getAllCity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scheduled Flights",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getSchedules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getSchedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userEmail\":\"test@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book the Ticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"noOfPassengers\":2, \r\n    \"noOfBusinessSeatsBooking\":2, \r\n    \"noOfNonBusinessSeatsBooking\": 0,\r\n    \"travelDate\":\"2021-11-21\",\r\n    \"flightSchedule\":{\r\n        \"flightScheduleId\": 2\r\n    },\r\n    \"user\":{\r\n        \"userId\": 2\r\n    },\r\n    \"passengerList\":[{\r\n        \"passengerName\":\"Ajay\",\r\n        \"gender\":\"Male\",\r\n        \"flightSeat\":{\r\n            \"flightSeatId\":3\r\n        },\r\n        \"meal\":{\r\n            \"mealId\":1\r\n        }\r\n    },\r\n    {\r\n        \"passengerName\":\"Akshara\",\r\n        \"gender\":\"Female\",\r\n        \"flightSeat\":{\r\n            \"flightSeatId\":4\r\n        },\r\n        \"meal\":{\r\n            \"mealId\":2\r\n        }\r\n    }]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/bookTicket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"bookTicket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Book the Ticket",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Token",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM3MDYxNjg1LCJpYXQiOjE2MzcwNDM2ODV9.WgQfMeoqabV-jmhBZh3bWP56DkYZioSh3msaIgesl8W1oIw3gXeLx1FEtebU0bpIcjXF33-gYZE2Z2WGJK6aEQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noOfPassengers\":2, \r\n    \"noOfBusinessSeatsBooking\":2, \r\n    \"noOfNonBusinessSeatsBooking\": 0,\r\n    \"travelDate\":\"2021-11-21\",\r\n    \"flightSchedule\":{\r\n        \"flightScheduleId\": 4\r\n    },\r\n    \"user\":{\r\n        \"userId\": 3\r\n    },\r\n    \"passengerList\":[{\r\n        \"passengerName\":\"Ajay\",\r\n        \"gender\":\"Male\",\r\n        \"flightSeat\":{\r\n            \"flightSeatId\":1\r\n        },\r\n        \"meal\":{\r\n            \"mealId\":1\r\n        }\r\n    },\r\n    {\r\n        \"passengerName\":\"Akshara\",\r\n        \"gender\":\"Female\",\r\n        \"flightSeat\":{\r\n            \"flightSeatId\":2\r\n        },\r\n        \"meal\":{\r\n            \"mealId\":2\r\n        }\r\n    }]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/makemefly/v1/bookTicket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"makemefly",
+								"v1",
+								"bookTicket"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 16 Nov 2021 06:25:12 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ticketBookingId\": 3,\n    \"noOfPassengers\": 2,\n    \"pnrNo\": \"2UOYQ\",\n    \"travelDate\": \"2021-11-21\",\n    \"ticketCost\": 18000,\n    \"bookingFlight\": {\n        \"flightScheduleId\": 4,\n        \"departureTime\": null,\n        \"arrivalTime\": null,\n        \"scheduledStartDate\": null,\n        \"scheduledEndDate\": null,\n        \"flight\": null,\n        \"departurePlaceId\": null,\n        \"destinationPlaceId\": null,\n        \"scheduleDays\": null\n    },\n    \"user\": {\n        \"userId\": 3,\n        \"userEmail\": null\n    },\n    \"passengerList\": [\n        {\n            \"passengerId\": 0,\n            \"passengerName\": \"Ajay\",\n            \"gender\": \"Male\",\n            \"flightSeat\": {\n                \"flightSeatId\": 1,\n                \"flightSeatNumber\": null,\n                \"isBusinessSeat\": 0\n            },\n            \"meal\": {\n                \"mealId\": 1,\n                \"mealType\": null\n            }\n        },\n        {\n            \"passengerId\": 0,\n            \"passengerName\": \"Akshara\",\n            \"gender\": \"Female\",\n            \"flightSeat\": {\n                \"flightSeatId\": 2,\n                \"flightSeatNumber\": null,\n                \"isBusinessSeat\": 0\n            },\n            \"meal\": {\n                \"mealId\": 2,\n                \"mealType\": null\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All passengers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getAllPassengers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getAllPassengers"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All tickets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getAllTickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getAllTickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ticket By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTIyMDU5LCJpYXQiOjE2MzY5MDQwNTl9.h2mUE38-33L_VREWH4k0g5meBSFpn-EeanIHI6N8jCaBxkYphd8ElEKIMMT8g1Eal1yyAtoFKZIho35Smd9gqQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTIyMDU5LCJpYXQiOjE2MzY5MDQwNTl9.h2mUE38-33L_VREWH4k0g5meBSFpn-EeanIHI6N8jCaBxkYphd8ElEKIMMT8g1Eal1yyAtoFKZIho35Smd9gqQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getTicket/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getTicket",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  Airline",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE2Mzc1ODk1NTIsImlhdCI6MTYzNzU3MTU1Mn0.70XQOV8DQ61FMSgLCV1Ow7ql7oSp44c156nB58EYu87T7CiwPLTvYoR5mY_3Zncieyl6JSbMu6F0h2KyeA5ZGA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/deleteAirline/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"deleteAirline",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Flight",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTcwMTY1LCJpYXQiOjE2MzY5NTIxNjV9.kzjGgFk14VO6vlwu4oiE8BL9z6O73kKTaBb26_-HDpTjNrx86BnICG-aVAsYLmYAg-yEm75l0qzrRlftrIvM3w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/deleteFlight/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"deleteFlight",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Flight",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTcwMTY1LCJpYXQiOjE2MzY5NTIxNjV9.kzjGgFk14VO6vlwu4oiE8BL9z6O73kKTaBb26_-HDpTjNrx86BnICG-aVAsYLmYAg-yEm75l0qzrRlftrIvM3w",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"travelDate\":\"2021-11-27\",\r\n    \"departurePlaceId\":4,\r\n    \"destinationPlaceId\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/searchFlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"searchFlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user\",\r\n    \"password\":\"makemefly\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dummy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM2OTc2NTQ5LCJpYXQiOjE2MzY5NTg1NDl9.j2aAQmYU9wCl0LKT7jrnocSLrbLws7UbViwmePkXyvEhefERlMwyRxRMzIsacVfnOIeWF3x0DqBUAms5s2BWzw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getMealPref/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getMealPref",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule Flight",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNjM3MzYzMjg0LCJpYXQiOjE2MzczNDUyODR9.KIOOH7GjlAKgAllE59YaB_fLuGWT7agzPTfdDeTQ3W02WyScyqsS800c0YGJFBeh_e8YwzggZWlZdh76VrhwEQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"departureTime\":\"2021-11-20T08:00:00\",\r\n\"arrivalTime\":\"2021-11-20T09:00:00\",\r\n\"scheduledStartDate\": \"2021-11-20T10:00:00\",\r\n\"scheduledEndDate\":\"2021-11-30T23:59:00\",\r\n\"flightId\": 3,\r\n\"departurePlaceId\":1,\r\n\"destinationPlaceId\":2,\r\n\"scheduleDaysId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/scheduleFlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"scheduleFlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Airline By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE2Mzc2MTg3OTUsImlhdCI6MTYzNzYwMDc5NX0.FmW8BC6nujZT189lcB6xJUugY0eGq2PVzHBcE5Gq5xlTYI6pv1IDOIls_-y68HpQqqJMmPccI3dxDmjX3yCV6A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getAirline/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getAirline",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Flight By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE2Mzc2NzI4ODgsImlhdCI6MTYzNzY1NDg4OH0.FAAirCQZndskgt5yJJP9Yg1wNwBxhuS--xWME0bhY8W3-xZjmd4dDhscU34QbdX7H8DxcKfsSigPpgXbMRCmMA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/makemefly/v1/getFlight/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"makemefly",
+						"v1",
+						"getFlight",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

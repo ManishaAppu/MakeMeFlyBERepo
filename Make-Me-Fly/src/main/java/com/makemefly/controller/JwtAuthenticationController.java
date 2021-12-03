@@ -1,11 +1,10 @@
 package com.makemefly.controller;
 
-import java.util.Objects;
-
 import com.makemefly.config.JwtTokenUtil;
 import com.makemefly.config.JwtUserDetailsService;
 import com.makemefly.dto.JwtRequest;
 import com.makemefly.dto.JwtResponse;
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -41,8 +40,9 @@ public class JwtAuthenticationController {
                 .loadUserByUsername(authenticationRequest.getUsername());
 
         final String token = jwtTokenUtil.generateToken(userDetails);
+        Claims claims = jwtTokenUtil.getAllClaimsFromToken(token);
 
-        return ResponseEntity.ok(new JwtResponse(token));
+        return ResponseEntity.ok(new JwtResponse(token,  claims.get("role").toString() ));
     }
 
     private void authenticate(String username, String password) throws Exception {
